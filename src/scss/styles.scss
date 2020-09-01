@@ -1,0 +1,96 @@
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+@import 'jquery.mCustomScrollbar';
+@import 'jquery.formstyler';
+@import 'jquery.formstyler.theme';
+@import 'slick';
+
+*, *:before, *:after { box-sizing: border-box; }
+ul { list-style: none; margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; }
+p, h1, h2, h3, h4, h5, h6, blockquote, figure { margin: 0; }
+img { object-fit: cover; max-width: 100%; }
+h1, h2, h3, h4, h5, h6 { margin: 0; line-height: 1;}
+picture { display: block; }
+html, body { height: 100%; }
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+html { font-size: 10px; scroll-behavior: smooth; }
+
+body {
+    @include font($body-ff, 1.5rem, $body-color, 400, 2);
+    background-color: $body-bg;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 15px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.section {
+    &__title {
+        @include font($title-ff, 3rem, $section-title-color, 700, 1.5);
+        text-align: center;
+        @media screen and (min-width: 425px) { text-align: left; }
+    }
+    &__catalog {
+        margin-top: 40px;
+        @include flex($jc: center, $ali: stretch);
+        position: relative;
+        padding-top: 45px;
+
+        @media screen and (min-width: 768px) { padding-top: 0; }
+    }
+    &__content {
+        width: 100%;
+        letter-spacing: $letter-space;
+
+        @media screen and (min-width: 768px) {
+            width: calc(100% - 270px);
+            padding-left: 30px;
+        }
+    }
+    &__subtitle {
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+    }
+}
+
+.btn {
+    @include flex($df: inline-flex, $jc: center);
+    @include font($btn-ff, 1.4rem, $btn-color, 400, 1.2);
+    min-height: 40px;
+    width: 100%;
+    padding: .5em 1em;
+    background-color: $btn-bg;
+    border: $border-width solid $btn-border-color;
+    cursor: pointer;
+    @include tr;
+    @include hover {
+        background-color: $btn-color;
+        border-color: $btn-color;
+        color: $secondary-color;
+    }
+    &:focus { outline: none; }
+}
+
+@import 'girls-block';
+@import 'sidebar';
+@import 'clothes-for-girls';
+@import 'similar-products';
+
+

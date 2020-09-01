@@ -1,0 +1,119 @@
+.goods-grid {
+    @include flex($jc: center);
+    flex-wrap: wrap;
+    position: relative;
+
+    @media screen and (min-width: 1170px) { justify-content: space-between; }
+
+    &__item {
+        width: 100%;
+        flex: 0 1 270px;
+        margin: 0 15px 15px;
+
+        @media screen and (min-width: 1170px) { margin: 0; }
+    }
+}
+
+.goods {
+    display: block;
+    width: 100%;
+    max-width: 270px;
+    height: 380px;
+    background-color: $secondary-color;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2.8px 1.2px rgba($black, 0.09);
+    position: relative;
+    border: $border-width solid transparent;
+    @include tr;
+    @include hover {
+        border-color: $goods-border-color;
+        box-shadow: 0px 5px 10.56px 1.44px rgba(68, 190, 217, 0.36);
+
+        .goods__description { color: $primary-color; }
+    }
+
+    &__figure { height: 100%; }
+
+    &__img-wrap {
+        position: relative;
+        height: 235px;
+        overflow: hidden;
+        background-color: $body-bg;
+    }
+    &__img {
+        @include posA($top: 50%, $left: 50%);
+        @include transform;
+        min-width: 100%;
+        min-height: 100%;
+    }
+    &__figcaption {
+        padding: 20px;
+        @include flex($jc: center);
+        flex-direction: column;
+        height: 145px;
+    }
+    &__stars {
+        line-height: 1;
+        .fas { color: $stars-color-active; }
+        .far {
+            display: none;
+            color: $stars-color-noactive;
+        }
+
+        &[data-stars="0"] .goods__star:nth-child(n + 1) .fas,
+        &[data-stars="1"] .goods__star:nth-child(n + 2) .fas,
+        &[data-stars="2"] .goods__star:nth-child(n + 3) .fas,
+        &[data-stars="3"] .goods__star:nth-child(n + 4) .fas,
+        &[data-stars="4"] .goods__star:nth-child(n + 5) .fas {
+            display: none;
+        }
+        &[data-stars="0"] .goods__star:nth-child(n + 1) .far,
+        &[data-stars="1"] .goods__star:nth-child(n + 2) .far,
+        &[data-stars="2"] .goods__star:nth-child(n + 3) .far,
+        &[data-stars="3"] .goods__star:nth-child(n + 4) .far,
+        &[data-stars="4"] .goods__star:nth-child(n + 5) .far {
+            display: inline-block;
+        }
+    }
+    &__star {
+        font-size: 1.4rem;
+        display: inline-block;
+    }
+    &__description {
+        margin-top: 10px;
+        padding-bottom: 10px;
+        position: relative;
+        @include tr;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 80px;
+            background-color: $medium-gray;
+            height: $border-width;
+            @include posA($bottom: 0, $left: calc(50% - 40px));
+        }
+    }
+    &__price {
+        font-weight: 700;
+        margin-top: 10px;
+    }
+    &__promo {
+        @include posA($top: 10px, $left: 15px);
+        z-index: 1;
+    }
+}
+
+.promo {
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $secondary-color;
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: .8em;
+    text-align: center;
+
+    &--novelty { background-color: $promo-novelty-bg; }
+    &--bestseller { background-color: $promo-bestseller-bg; }
+}

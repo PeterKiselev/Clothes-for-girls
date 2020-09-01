@@ -1,0 +1,48 @@
+.sidebar-toggle {
+    @include posA($top: 0, $left: 0);
+    @extend .promo;
+    @extend .promo--novelty;
+    cursor: pointer;
+
+    i { font-size: 1.1em; }
+
+    &__text { margin-left: 10px; }
+
+    @media screen and (min-width: 768px) { display: none; }
+}
+
+.sidebar {
+    @include posA($top: 50px, $left: 0);
+    z-index: 5;
+    background-color: rgba($primary-color, .7);
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+    transform-origin: top left;
+    @include tr(.3s);
+    &--opened {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+
+    @media screen and (min-width: 768px) {
+        position: static;
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+        background-color: $sidebar-bg;
+    }
+
+    width: 270px;
+    min-height: 200px;
+
+    &__block { padding: 0 8px; }
+}
+
+.jq-selectbox { width: 100%; }
+
+.jq-selectbox__dropdown ul { max-height: 190px; }
+
+#mCSB_1_dragger_vertical, #mCSB_2_dragger_vertical, #mCSB_4_dragger_vertical { height: 0 !important; }
+
+select {
+    &:focus { outline: none; }
+}

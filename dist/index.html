@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/260e80cfa3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <title>Slice Planet</title>
+</head>
+<body>
+
+    <header>
+        <h1 class="visually-hidden">Slice planet</h1>
+    </header>
+    <main>
+        <section class="section section--girls-block">
+            <div class="container">
+                <h2 class="section__title">Одежда для девочек</h2>
+                <div class="section__catalog">
+                    <span class="sidebar-toggle" onclick="toggleMenu(event)">
+                        <i class="fas fa-sort"></i>
+                        <span class="sidebar-toggle__text">фильтры</span>
+                    </span>
+                    
+                    <aside class="sidebar">
+                        <div class="sidebar-block sec maxheight">
+                            <select data-placeholder="Категории">
+                                    <option></option>
+                                    <option>Пункт 1</option>
+                                    <option>Пункт 2</option>
+                                    <option>Пункт 3</option>
+                                    <option>Пункт 4</option>
+                                    <option>Пункт 5</option>
+                                    <option>Пункт 6</option>
+                                    <option>Пункт 7</option>
+                            </select>
+                        </div>
+                        <div class="sec maxheight">
+                            <select data-placeholder="Размер">
+                                <option></option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Пункт 3</option>
+                                <option>Пункт 4</option>
+                                <option>Пункт 5</option>
+                                <option>Пункт 6</option>
+                                <option>Пункт 7</option>
+                                <option>Пункт 8</option>
+                            </select>
+                        </div>
+                        <div class="sec maxheight">
+                            <select data-placeholder="Цвет">
+                                <option>Цвет</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Пункт 3</option>
+                                <option>Пункт 4</option>
+                                <option>Пункт 5</option>
+                                <option>Пункт 6</option>
+                                <option>Пункт 7</option>
+                                <option>Пункт 8</option>
+                                <option>Пункт 9</option>
+                            </select>
+                        </div>
+                        <div class="sec maxheight">
+                            <select data-placeholder="Материал">
+                                <div class="mCustomScrollbar" data-mcs-theme="dark-thick">
+                                    <option></option>
+                                    <option class="jq-selectbox__active">Все</option>
+                                    <option>100% хлопок</option>
+                                    <option>Трикотаж</option>
+                                    <option>Шерсть</option>
+                                    <option>Джинсовый</option>
+                                    <option>Составной</option>
+                                    <option>Пункт 7</option>
+                                    <option>Пункт 8</option>
+                                    <option>Пункт 9</option>
+                                    <option>Пункт 10</option>
+                                    <option>Пункт 11</option>
+                                    <option>Пункт 12</option>
+                                </div>
+                            </select>
+                        </div>
+                        <button class="btn" type="button">Применить фильтр</button>
+                    </aside>
+                    <div class="section__content">
+                        <section class="clothes-girls">
+                            <h2 class="visually-hidden">Clothes for girls</h2>
+                            <ul class="goods-grid">
+                                <li class="goods-grid__item">
+                                    <a href="#" class="goods" target="_blank" rel="noopener noreferrer">
+                                        <span class="promo promo--novelty goods__promo">новинка</span>
+                                        <figure class="goods__figure">
+                                            <picture class="goods__img-wrap">
+                                                <img class="goods__img" src="img/goods-img-1.jpg" alt="goods img">
+                                            </picture>
+                                            <figcaption class="goods__figcaption">
+                                                <ul class="goods__stars" data-stars="5">
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                                <div class="goods__description">Свитер в полоску</div>
+                                                <div class="goods__price">123 грн</div>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </li>
+                                <li class="goods-grid__item">
+                                    <a href="#" class="goods" target="_blank" rel="noopener noreferrer">
+                                        <span class="promo promo--bestseller goods__promo">хит продаж</span>
+                                        <figure class="goods__figure">
+                                            <picture class="goods__img-wrap">
+                                                <img class="goods__img" src="img/goods-img-2.jpg" alt="goods img">
+                                            </picture>
+                                            <figcaption class="goods__figcaption">
+                                                <ul class="goods__stars" data-stars="4">
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                                <div class="goods__description">Платье с цветочным принтом</div>
+                                                <div class="goods__price">123 грн</div>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </li>
+                                <li class="goods-grid__item">
+                                    <a href="#" class="goods" target="_blank" rel="noopener noreferrer">
+                                        <figure class="goods__figure">
+                                            <picture class="goods__img-wrap">
+                                                <img class="goods__img" src="img/goods-img-3.jpg" alt="goods img">
+                                            </picture>
+                                            <figcaption class="goods__figcaption">
+                                                <ul class="goods__stars" data-stars="4">
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                                <div class="goods__description">Джинсовый комбинезон</div>
+                                                <div class="goods__price">123 грн</div>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="section section--similar-products">
+                            <h3 class="section__subtitle">Похожие товары</h3>
+                            <ul class="goods-grid goods-grid--similar">
+                                <li class="goods-grid__item">
+                                    <a href="#" class="goods" target="_blank" rel="noopener noreferrer">
+                                        <figure class="goods__figure">
+                                            <picture class="goods__img-wrap">
+                                                <img class="goods__img" src="img/goods-img-1.jpg" alt="goods img">
+                                            </picture>
+                                            <figcaption class="goods__figcaption">
+                                                <ul class="goods__stars" data-stars="5">
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                                <div class="goods__description">Свитер в полоску</div>
+                                                <div class="goods__price">123 грн</div>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </li>
+                                <li class="goods-grid__item">
+                                    <a href="#" class="goods" target="_blank" rel="noopener noreferrer">
+                                        <figure class="goods__figure">
+                                            <picture class="goods__img-wrap">
+                                                <img class="goods__img" src="img/goods-img-2.jpg" alt="goods img">
+                                            </picture>
+                                            <figcaption class="goods__figcaption">
+                                                <ul class="goods__stars" data-stars="4">
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                                <div class="goods__description">Платье с цветочным принтом</div>
+                                                <div class="goods__price">123 грн</div>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </li>
+                                <li class="goods-grid__item">
+                                    <a href="#" class="goods" target="_blank" rel="noopener noreferrer">
+                                        <figure class="goods__figure">
+                                            <picture class="goods__img-wrap">
+                                                <img class="goods__img" src="img/goods-img-3.jpg" alt="goods img">
+                                            </picture>
+                                            <figcaption class="goods__figcaption">
+                                                <ul class="goods__stars" data-stars="4">
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                                <div class="goods__description">Джинсовый комбинезон</div>
+                                                <div class="goods__price">123 грн</div>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </li>
+                                <li class="goods-grid__item">
+                                    <a href="#" class="goods" target="_blank" rel="noopener noreferrer">
+                                        <figure class="goods__figure">
+                                            <picture class="goods__img-wrap">
+                                                <img class="goods__img" src="img/goods-img-3.jpg" alt="goods img">
+                                            </picture>
+                                            <figcaption class="goods__figcaption">
+                                                <ul class="goods__stars" data-stars="4">
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                                <div class="goods__description">Джинсовый комбинезон</div>
+                                                <div class="goods__price">123 грн</div>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </li>
+                                <!-- <li class="goods-grid__item">
+                                    <a href="#" class="goods" target="_blank" rel="noopener noreferrer">
+                                        <figure class="goods__figure">
+                                            <picture class="goods__img-wrap">
+                                                <img class="goods__img" src="img/goods-img-3.jpg" alt="goods img">
+                                            </picture>
+                                            <figcaption class="goods__figcaption">
+                                                <ul class="goods__stars" data-stars="4">
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                                <div class="goods__description">Джинсовый комбинезон</div>
+                                                <div class="goods__price">123 грн</div>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </li> -->
+                                <!-- <li class="goods-grid__item">
+                                    <a href="#" class="goods" target="_blank" rel="noopener noreferrer">
+                                        <figure class="goods__figure">
+                                            <picture class="goods__img-wrap">
+                                                <img class="goods__img" src="img/goods-img-3.jpg" alt="goods img">
+                                            </picture>
+                                            <figcaption class="goods__figcaption">
+                                                <ul class="goods__stars" data-stars="4">
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                    <li class="goods__star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                                <div class="goods__description">Джинсовый комбинезон</div>
+                                                <div class="goods__price">123 грн</div>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </li> -->
+                            </ul>
+                            <div class="buttons">
+                                <button class="buttons__btn prevArrow" type="button">
+                                    <svg width="7" height="10">
+                                        <use xlink:href="#arrow-prev"></use>
+                                    </svg>
+                                </button>
+                               
+                                <button class="buttons__btn nextArrow" type="button">
+                                    <svg width="7" height="10">
+                                        <use xlink:href="#arrow-prev"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+    <svg style="display: none;">
+        <symbol id="arrow-prev" viewBox="0 0 7 10">
+            <path d="M4.774,9.997 C5.078,9.997 5.381,9.884 5.618,9.656 C6.108,9.185 6.128,8.401 5.662,7.905 L2.922,4.991 L5.659,2.097 C6.127,1.603 6.110,0.819 5.621,0.346 C5.132,-0.127 4.357,-0.109 3.889,0.385 L0.345,4.132 C-0.107,4.610 -0.108,5.362 0.342,5.842 L3.886,9.612 C4.127,9.868 4.450,9.997 4.774,9.997 Z"/>
+        </symbol>
+    </svg>
+    <script src="js/main.min.js"></script>
+</body>
+</html>

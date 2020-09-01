@@ -1,0 +1,71 @@
+.section {
+    &--similar-products {
+        margin-top: 35px;
+        position: relative;
+    }
+}
+
+.goods-grid {
+    &--similar {
+        margin-top: 20px;
+        *:focus { outline:  none; }
+
+        .goods-grid__item { margin: 0; }
+        
+        .goods { margin: 0 auto; }
+    }
+}
+
+.nextArrow { transform: rotate(180deg); }
+
+.buttons {
+    @include flex($jc: center);
+    justify-content: center;
+    margin-top: 45px;
+
+    &__btn {
+        cursor: pointer;
+        margin: 0 35px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        border: $border-width solid $btn-border-slider;
+        @include tr;
+        @include hover {
+            background-color: $arrow-slider-color;
+            border-color: $arrow-slider-color;
+            svg { fill: $btn-border-slider; }
+        }
+
+        &:focus { outline: none; }
+
+        svg {
+            line-height: 38px;
+            fill: $arrow-slider-color;
+            @include tr;
+        }
+    }
+}
+// slick
+.slick-arrow { display: none; }
+
+.slick-dots { 
+    @include flex;
+    @include posA($bottom: -70px, $left: 50%);
+    @include transform;
+}
+
+.slick-dots li { font-size: 0; }
+
+.slick-dots li.slick-active button { background-color: $dots-active-bg; }
+
+.slick-dots li button { 
+    font-size: 0; 
+    border: none; 
+    padding: 0; 
+    background-color: $btn-border-slider;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    margin: 0 3px;
+}
